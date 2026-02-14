@@ -48,7 +48,6 @@
     </nav>
 
     <div class="content-wrapper">
-        
         <section id="docs">
             <h2 class="section-title">Performance Clips</h2>
             <div class="video-grid">
@@ -60,7 +59,6 @@
                     </div>
                     <div class="proxy-bg" style="background-image: url('https://img.youtube.com/vi/f1_prwrI7Iw/hqdefault.jpg');"></div>
                 </a>
-
                 <a href="https://youtu.be/WgUeoyNCO4I" target="_blank" class="video-proxy-card">
                     <div class="proxy-overlay">
                         <div class="play-icon">▶</div>
@@ -169,7 +167,6 @@
                 <div class="gallery-item"><img src="img/ICCRW.jpg" class="zoomable" alt="ICCRW Nomination"><div class="overlay">ICCRW Nominee</div></div>
                 <div class="gallery-item"><img src="img/navy_painting.jpg" class="zoomable" alt="Naval HQ Painting Gift"><div class="overlay">Naval HQ Gift</div></div>
                 <div class="gallery-item"><img src="img/stage_speaking.jpg" class="zoomable" alt="Public Speaking Event"><div class="overlay">Stage Performance</div></div>
-                <div class="gallery-item"><img src="img/cricket_ball.jpg" class="zoomable" alt="Inter-House Cricket Match"><div class="overlay">Cricket Match</div></div>
                 <div class="gallery-item"><img src="img/ICCs.jpg" class="zoomable" alt="Inter-Cadet College Meet"><div class="overlay">Cadet Highlights</div></div>
             </div>
         </section>
@@ -186,7 +183,6 @@
         const captionText = document.getElementById("caption");
         const closeBtn = document.getElementsByClassName("close")[0];
 
-        // Click an image to show in modal
         document.querySelectorAll('.zoomable').forEach(img => {
             img.onclick = function() {
                 modal.style.display = "flex";
@@ -195,7 +191,6 @@
             }
         });
 
-        // Close modal logic
         closeBtn.onclick = function() { modal.style.display = "none"; }
         modal.onclick = function(event) { if (event.target === modal) modal.style.display = "none"; }
     </script>
