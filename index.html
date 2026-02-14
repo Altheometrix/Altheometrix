@@ -50,37 +50,47 @@
     <div class="content-wrapper">
         
         <section id="docs">
-    <h2 class="section-title">Academic Research & Publications</h2>
-    
-    <div class="video-grid">
-        <iframe src="https://youtu.be/f1_prwrI7Iw" title="CAD Performance (PPT)" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://youtu.be/WgUeoyNCO4I" title="CAD Papers" frameborder="0" allowfullscreen></iframe>
-    </div>
+            <h2 class="section-title">Performance Clips</h2>
+            <div class="video-grid">
+                <a href="https://youtu.be/f1_prwrI7Iw" target="_blank" class="video-proxy-card">
+                    <div class="proxy-overlay">
+                        <div class="play-icon">▶</div>
+                        <span class="proxy-label">LAUNCH PERFORMANCE 01</span>
+                        <p class="proxy-subtext">CAD Performance (PPT) // Watch on YouTube</p>
+                    </div>
+                    <div class="proxy-bg" style="background-image: url('https://img.youtube.com/vi/f1_prwrI7Iw/hqdefault.jpg');"></div>
+                </a>
 
-    <div class="preview-container">
-        <div class="preview-box doc-link-card">
-            <h3 class="tech-label">Luminous Magazine</h3>
-            <a href="https://drive.google.com/file/d/1tB21aaWU79iGkZ17bB80WEGroUjkj6Um/view?usp=drive_link" target="_blank" class="visual-link">
-                <img src="img/Luminous_Mag.jpg" alt="Luminous Magazine Cover" class="doc-thumbnail">
-                <div class="doc-overlay">
-                    <span>Read Publication</span>
-                </div>
-            </a>
-            <p class="doc-caption">Annual College Publication // Editorial Board</p>
-        </div>
+                <a href="https://youtu.be/WgUeoyNCO4I" target="_blank" class="video-proxy-card">
+                    <div class="proxy-overlay">
+                        <div class="play-icon">▶</div>
+                        <span class="proxy-label">LAUNCH PERFORMANCE 02</span>
+                        <p class="proxy-subtext">CAD Research Papers // Watch on YouTube</p>
+                    </div>
+                    <div class="proxy-bg" style="background-image: url('https://img.youtube.com/vi/WgUeoyNCO4I/hqdefault.jpg');"></div>
+                </a>
+            </div>
 
-        <div class="preview-box doc-link-card">
-            <h3 class="tech-label">Science Research Paper</h3>
-            <a href="https://drive.google.com/file/d/1tL85700Up9MwqmVSlFM__9vjVSGDRikC/view?usp=drive_link" target="_blank" class="visual-link">
-                <img src="img/R_paper_cc.jpg" alt="Research Paper Preview" class="doc-thumbnail">
-                <div class="doc-overlay">
-                    <span>View Full Paper</span>
+            <div class="preview-container">
+                <div class="preview-box doc-link-card">
+                    <h3 class="tech-label">Luminous Magazine</h3>
+                    <a href="https://drive.google.com/file/d/1tB21aaWU79iGkZ17bB80WEGroUjkj6Um/preview" target="_blank" class="visual-link">
+                        <img src="img/Luminous_Mag.jpg" alt="Luminous Magazine Cover" class="doc-thumbnail">
+                        <div class="doc-overlay"><span>Open Drive File</span></div>
+                    </a>
+                    <p class="doc-caption">Annual College Publication // Editorial Board</p>
                 </div>
-            </a>
-            <p class="doc-caption">Climate Change Analysis // Scientific Research</p>
-        </div>
-    </div>
-</section>
+
+                <div class="preview-box doc-link-card">
+                    <h3 class="tech-label">Science Research Paper</h3>
+                    <a href="https://drive.google.com/file/d/1tL85700Up9MwqmVSlFM__9vjVSGDRikC/preview" target="_blank" class="visual-link">
+                        <img src="img/R_paper_cc.jpg" alt="Research Paper Preview" class="doc-thumbnail">
+                        <div class="doc-overlay"><span>View Full Paper</span></div>
+                    </a>
+                    <p class="doc-caption">Climate Change Analysis // Scientific Research</p>
+                </div>
+            </div>
+        </section>
 
         <section id="premier">
             <h2 class="section-title">Premier National Honors</h2>
@@ -171,33 +181,21 @@
     </footer>
 
     <script>
-        // Get elements
         const modal = document.getElementById("lightbox");
         const modalImg = document.getElementById("full-img");
         const captionText = document.getElementById("caption");
         const closeBtn = document.getElementsByClassName("close")[0];
 
-        // Attach click event to all images with class 'zoomable'
         document.querySelectorAll('.zoomable').forEach(img => {
             img.onclick = function() {
-                modal.style.display = "flex"; // Use flex to center
+                modal.style.display = "flex";
                 modalImg.src = this.src;
                 captionText.innerHTML = this.alt;
             }
         });
 
-        // Close functions
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
-        
-        // Close when clicking outside the image
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
+        closeBtn.onclick = function() { modal.style.display = "none"; }
+        modal.onclick = function(event) { if (event.target === modal) modal.style.display = "none"; }
     </script>
-
 </body>
 </html>
